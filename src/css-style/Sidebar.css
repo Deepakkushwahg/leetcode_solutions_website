@@ -1,0 +1,43 @@
+#sidebar {
+    overflow-y: hidden;
+    width: 21rem;
+    height: 82vh;
+    margin-left: -18px;
+}
+
+#sidebar:hover {
+    overflow-y: scroll;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+#questions-no {
+    margin-top: -10px;
+    margin-left: -15px;
+}
+
+#questions-no li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+#questions-no li a:hover {
+    color: gold;
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.459);
+    border-radius: 5px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: gold;
+}

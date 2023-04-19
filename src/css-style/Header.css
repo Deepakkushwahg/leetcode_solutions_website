@@ -1,0 +1,39 @@
+#leetcode {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    box-shadow: 1px 2px 2px gray;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color: lightcyan;
+}
+
+#header {
+    height: 75px;
+    width: 65%;
+    display: flex;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 {
+    font-size: 28px;
+    margin-left: 10px;
+    /* text-shadow: 1px -5px 5px rgba(21, 21, 21, 0.377), 1px 5px 5px rgba(21, 21, 21, 0.377); */
+}
+
+#profile {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+}
+
+#profile span {
+    margin-left: 5px;
+}
