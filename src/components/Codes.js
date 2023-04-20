@@ -1,7 +1,18 @@
 import React,{useEffect, useState} from 'react'
 import '../css-style/Codes.css';
+import copyImage from '../images/copy.png';
 import leetcode from '../images/leetcode.png'
 export default function Codes() {
+
+  const handleCopy = (copyText)=>{
+    try{
+      navigator.clipboard.writeText(copyText);
+      console.log('text copied');
+    }
+    catch(e){
+      console.log('error to copy text');
+    }
+  }
   const [data, setData] = useState([]);
   const getUsers = async ()=>{
     const response = await fetch('http://localhost:8080/getQuestions',{
@@ -25,7 +36,10 @@ export default function Codes() {
                     {data.map(doc => (
                       <>
                       <h1 id={doc.q_no} key={doc._id}>{doc.q_no}. {doc.question}</h1>
-                      <div class="box"><code><pre>{doc.code}</pre></code></div>
+                      <div class="box">
+                      <abbr title="copy"><img id='copy-to-clipboard' src={copyImage} alt="copy.png" onClick={()=>handleCopy(doc.code)}/></abbr>
+                      <div id='code'><code><pre>{doc.code}</pre></code></div>
+                      </div>
                       </>
                     ))}
                 </div>
