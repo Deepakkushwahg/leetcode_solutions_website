@@ -37,7 +37,7 @@ server.get('/getQuestions', async(req, res) => {
     });
 
     const collection = result.db(database).collection('Questions');
-    const data = await collection.find({}).toArray();
+    const data = await collection.find({}).sort({ "q_no": 1 }).toArray();
     res.send(data);
 });
 
