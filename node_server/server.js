@@ -4,19 +4,6 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 8080;
 
 
-// const mongoose = require('mongoose');
-
-// main().catch(err => console.log(err));
-
-// async function main() {
-//     await mongoose.connect('mongodb://127.0.0.1:27017/Leetcode');
-//     console.log('db connected');
-// }
-// const QuestionsSchema = new mongoose.Schema({
-//     question: Number,
-//     code: String
-// });
-
 const server = express();
 server.use(cors());
 server.use(bodyParser.json());
