@@ -3,7 +3,7 @@ import '../css-style/Sidebar.css';
 export default function Sidebar() {
   const [data, setData] = useState([]);
   const getUsers = async ()=>{
-    const response = await fetch('http://localhost:8080/getQuestions',{
+    const response = await fetch('/getQuestions',{
       method:'GET',
     })
    const data = await response.json();
