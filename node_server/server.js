@@ -8,6 +8,8 @@ const server = express();
 server.use(cors());
 server.use(bodyParser.json());
 
+// server.use(express.static('static'));
+
 const { MongoClient } = require('mongodb');
 const url = 'mongodb+srv://Deepak:kris1234@cluster0.moctqsw.mongodb.net/?retryWrites=true&w=majority';
 const client = new MongoClient(url);
